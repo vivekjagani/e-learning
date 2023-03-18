@@ -32,13 +32,7 @@ class AppDrawer extends StatelessWidget {
         const Divider(
           thickness: 1,
         ),
-        InkWell(
-          onTap: () {},
-          child: const ListTile(
-            leading: Icon(Icons.bubble_chart),
-            title: Text("My cart"),
-          ),
-        ),
+        
         const Divider(
           thickness: 1,
         ),

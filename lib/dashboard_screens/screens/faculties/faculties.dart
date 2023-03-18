@@ -4,8 +4,9 @@ class FacultiesScreen extends StatelessWidget {
   String name;
   int number;
   String email;
+  String ?image;
 
-  FacultiesScreen({Key? key,required this.name,required this.email,required this.number}) : super(key: key);
+  FacultiesScreen({Key? key,required this.name,required this.email,required this.number,this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +21,8 @@ class FacultiesScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
+            Image.asset(this.image??''),
           Icon(Icons.person,size: 200,),
           Text('Name : ${this.name}'),
           Text('Number : ${this.number.toString()}'),

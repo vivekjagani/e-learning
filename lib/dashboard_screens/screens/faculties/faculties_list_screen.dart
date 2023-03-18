@@ -29,6 +29,7 @@ class FacultiesListScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => FacultiesScreen(
+                          image: facultiesData[index].image,
                           email: facultiesData[index].email,
                           name: facultiesData[index].name,
                           number: facultiesData[index].number,
