@@ -1,9 +1,9 @@
+import 'package:e_learning/dashboard_screens/screens/faculties/faculties_list_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
 import 'screens/all_cource.dart';
 import 'screens/books.dart';
-import 'screens/faculties/faculties_list_screen.dart';
 import 'screens/home_screen.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -49,8 +49,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                 BottomNavigationBarItem(
                     icon: Icon(Icons.catching_pokemon_sharp),
                     label: 'All Course'),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.book), label: 'Books'),
+                BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Books'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.person), label: 'faculties')
               ]),

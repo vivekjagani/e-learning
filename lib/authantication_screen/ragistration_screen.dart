@@ -18,12 +18,12 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-
-            Text('Ragistration',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
-            SizedBox(height: 20,),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          const Text('Ragistration',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          const SizedBox(
+            height: 20,
+          ),
           SizedBox(
             height: 50,
             child: TextFormField(
@@ -95,7 +95,8 @@ class SignUpScreen extends StatelessWidget {
           SizedBox(
             height: 50,
             width: double.infinity,
-            child: ClipRRect(borderRadius: BorderRadius.circular(20),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
               child: ElevatedButton(
                 child: const Text('Sign In'),
                 onPressed: () {
@@ -108,7 +109,9 @@ class SignUpScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(
+            height: 20,
+          ),
           Center(
             child: RichText(
               text: TextSpan(
@@ -117,13 +120,15 @@ class SignUpScreen extends StatelessWidget {
                   children: [
                     TextSpan(
                         text: 'Sign In',
-                        style: TextStyle(color: appBlackColor),
+                        style: const TextStyle(
+                            color: Color.fromARGB(255, 51, 17, 144),
+                            fontWeight: FontWeight.bold),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => LoginScreen(),
+                                  builder: (context) => const LoginScreen(),
                                 ));
                           })
                   ]),

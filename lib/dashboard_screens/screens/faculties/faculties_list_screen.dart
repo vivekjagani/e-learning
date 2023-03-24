@@ -1,6 +1,9 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-import '../../../constant.dart';
+import 'package:e_learning/admin/facultis_cnt.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 import 'faculties.dart';
 
 class FacultiesListScreen extends StatelessWidget {
@@ -8,6 +11,7 @@ class FacultiesListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cnt = Get.put(FacultiesCnt());
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -29,10 +33,10 @@ class FacultiesListScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => FacultiesScreen(
-                          image: facultiesData[index].image,
-                          email: facultiesData[index].email,
-                          name: facultiesData[index].name,
-                          number: facultiesData[index].number,
+                          image: cnt.facultiesData[index].image,
+                          email: cnt.facultiesData[index].email,
+                          name: cnt.facultiesData[index].name,
+                          number: cnt.facultiesData[index].number,
                         ),
                       ));
                 },
@@ -49,13 +53,18 @@ class FacultiesListScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(10),
                           child: Container(
                             width: 80,
+                            height: 100,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 color: Colors.blue[100]),
-                            child: const Icon(
-                              Icons.person,
-                              size: 100,
-                            ),
+                            child: cnt.facultiesData[index].image.isEmpty
+                                ? const Icon(Icons.person)
+                                : ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Image.file(
+                                        File(cnt.facultiesData[index].image),
+                                        fit: BoxFit.cover),
+                                  ),
                           ),
                         ),
                       ),
@@ -66,9 +75,9 @@ class FacultiesListScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Name : ${facultiesData[index].name}'),
+                            Text('Name : ${cnt.facultiesData[index].name}'),
                             Text(
-                                'Number : ${facultiesData[index].number.toString()}'),
+                                'Number : ${cnt.facultiesData[index].number.toString()}'),
                           ],
                         )),
                       )
@@ -78,7 +87,7 @@ class FacultiesListScreen extends StatelessWidget {
               ),
             );
           },
-          itemCount: facultiesData.length),
+          itemCount: cnt.facultiesData.length),
     );
   }
 }
