@@ -1,9 +1,9 @@
+import 'package:e_learning/dashboard_screens/screens/books/books_list.dart';
 import 'package:e_learning/dashboard_screens/screens/faculties/faculties_list_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
-import 'screens/all_cource.dart';
-import 'screens/books.dart';
+import 'screens/all cource/all_cource.dart';
 import 'screens/home_screen.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -21,7 +21,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     final List pages = [
       const HomeScreen(),
       const AllCource(),
-      const Books(),
+      const BooksList(),
       const FacultiesListScreen(),
     ];
 

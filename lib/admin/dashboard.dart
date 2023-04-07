@@ -1,3 +1,5 @@
+import 'package:e_learning/admin/add%20pdf/pdf_list.dart';
+import 'package:e_learning/admin/add%20video/video_list.dart';
 import 'package:e_learning/admin/faculti_list.dart';
 import 'package:e_learning/constant.dart';
 import 'package:flutter/material.dart';
@@ -61,12 +63,12 @@ class AdminDashboard extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Facultielist(),
+                          builder: (context) => const VideoList(),
                         ));
                   },
                   child: const Center(
                       child: Text(
-                    'Faculties',
+                    'add video',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   )),
                 ),
@@ -88,45 +90,18 @@ class AdminDashboard extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Facultielist(),
+                          builder: (context) => const PdfListScreen(),
                         ));
                   },
                   child: const Center(
                       child: Text(
-                    'Faculties',
+                    'add pdf',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   )),
                 ),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            child: Container(
-              height: 60,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(255, 36, 111, 103)),
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Facultielist(),
-                        ));
-                  },
-                  child: const Center(
-                      child: Text(
-                    'Faculties',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )),
-                ),
-              ),
-            ),
-          )
         ],
       ),
     );

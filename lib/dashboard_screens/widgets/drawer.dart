@@ -1,3 +1,4 @@
+import 'package:e_learning/authantication_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -32,7 +33,6 @@ class AppDrawer extends StatelessWidget {
         const Divider(
           thickness: 1,
         ),
-        
         const Divider(
           thickness: 1,
         ),
@@ -58,7 +58,11 @@ class AppDrawer extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            Navigator.pop(context);
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginScreen(),
+                ));
           },
           child: const ListTile(
             leading: Icon(Icons.logout),

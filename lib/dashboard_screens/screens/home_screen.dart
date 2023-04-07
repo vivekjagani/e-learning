@@ -81,34 +81,78 @@ class HomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
             ClipRRect(
               borderRadius: BorderRadius.circular(18),
-              child: CarouselSlider(
-                  items: [
-                    Image.asset('asset/slide1.png'),
-                    Image.asset('asset/slide2.png'),
-                    Image.asset('asset/slide3.png'),
-                    Image.asset('asset/slide4.png'),
-                    Image.asset('asset/slide5.png'),
-                  ],
-                  options: CarouselOptions(
-                    height: 400,
-                    aspectRatio: 16 / 9,
-                    viewportFraction: 0.8,
-                    initialPage: 0,
-                    enableInfiniteScroll: true,
-                    reverse: false,
+              child: SizedBox(
+                height: 200,
+                child: CarouselSlider(
+                    items: [
+                      Container(
+                        width: Get.width,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                image: AssetImage('asset/slide1.png'),
+                                fit: BoxFit.cover)),
+                      ),
+                      Container(
+                        width: Get.width,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                image: AssetImage('asset/slide2.png'),
+                                fit: BoxFit.cover)),
+                      ),
+                      Container(
+                        width: Get.width,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                image: AssetImage('asset/slide3.png'),
+                                fit: BoxFit.cover)),
+                      ),
+                      Container(
+                        width: Get.width,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                image: AssetImage('asset/slide4.png'),
+                                fit: BoxFit.cover)),
+                      ),
+                      Container(
+                        width: Get.width,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                                image: AssetImage('asset/slide5.png'),
+                                fit: BoxFit.fill)),
+                      ),
+                    ],
+                    options: CarouselOptions(
+                      height: 400,
+                      aspectRatio: 16 / 9,
+                      viewportFraction: 0.8,
+                      initialPage: 0,
+                      enableInfiniteScroll: true,
+                      reverse: false,
 
-                    autoPlay: true,
-                    autoPlayInterval: const Duration(seconds: 3),
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enlargeCenterPage: true,
-                    enlargeFactor: 0.3,
-                    // onPageChanged: callbackFunction,
-                    scrollDirection: Axis.horizontal,
-                  )),
+                      autoPlay: true,
+                      autoPlayInterval: const Duration(seconds: 3),
+                      autoPlayAnimationDuration:
+                          const Duration(milliseconds: 800),
+                      autoPlayCurve: Curves.fastOutSlowIn,
+                      enlargeCenterPage: true,
+                      enlargeFactor: 0.3,
+                      // onPageChanged: callbackFunction,
+                      scrollDirection: Axis.horizontal,
+                    )),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -139,7 +183,7 @@ class HomeScreen extends StatelessWidget {
               height: 20,
             ),
             SizedBox(
-              height: 180,
+              height: 170,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: cnt.facultiesData.length,

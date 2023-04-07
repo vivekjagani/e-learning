@@ -14,14 +14,33 @@ class SpleshScreen extends StatefulWidget {
 class _SpleshScreenState extends State<SpleshScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 2), () =>Navigator.push(context,MaterialPageRoute(builder: (context) => LoginScreen(),)) );
+    Timer(
+        const Duration(seconds: 2),
+        () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const LoginScreen(),
+            )));
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Splesh Screen')),
+    return Scaffold(
+      body: Center(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset('asset/logo.jpeg'),
+          const SizedBox(
+            height: 15,
+          ),
+          const Text(
+            'Learnerz',
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          ),
+        ],
+      )),
     );
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:e_learning/admin/facultis_cnt.dart';
 import 'package:e_learning/constant.dart';
 import 'package:e_learning/facultie.dart';
@@ -41,28 +39,28 @@ class AddFaculties extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                InkWell(
-                    onTap: () {
-                      cnt.getImageValue();
-                    },
-                    child: Container(
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: appPrimaryColor),
-                      child: cnt.imageFile == null
-                          ? const Icon(Icons.person)
-                          : ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.file(
-                                File(cnt.imagePath.toString()),
-                                height: 100,
-                                width: 100,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                    )),
+                // InkWell(
+                //     onTap: () {
+                //       cnt.getImageValue();
+                //     },
+                //     child: Container(
+                //       height: 100,
+                //       width: 100,
+                //       decoration: BoxDecoration(
+                //           borderRadius: BorderRadius.circular(10),
+                //           color: appPrimaryColor),
+                //       child: cnt.imageFile == null
+                //           ? const Icon(Icons.person)
+                //           : ClipRRect(
+                //               borderRadius: BorderRadius.circular(10),
+                //               child: Image.file(
+                //                 File(cnt.imagePath.toString()),
+                //                 height: 100,
+                //                 width: 100,
+                //                 fit: BoxFit.cover,
+                //               ),
+                //             ),
+                //     )),
 
                 const SizedBox(
                   height: 10,

@@ -13,6 +13,7 @@ class FacultiesCnt extends GetxController {
   // Rx<String> imagePath = ''.obs;
   PickedFile? imageFile;
   void getImageValue() async {
+    // ignore: deprecated_member_use
     PickedFile? pickedFile = await picker.getImage(
       source: ImageSource.camera,
       maxWidth: 1800,
