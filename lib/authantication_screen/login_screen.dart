@@ -1,6 +1,8 @@
 import 'package:e_learning/admin/dashboard.dart';
+import 'package:e_learning/authantication_screen/forgot_password.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../constant.dart';
 import '../dashboard_screens/dashboard_screen.dart';
@@ -74,6 +76,13 @@ class LoginScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10))),
               ),
             ),
+            Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+              TextButton(
+                  onPressed: () {
+                    Get.to(ForgotPasswordScreen());
+                  },
+                  child: const Text('Forgot Password?'))
+            ]),
             const SizedBox(
               height: 20,
             ),

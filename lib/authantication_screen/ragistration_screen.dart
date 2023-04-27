@@ -123,7 +123,7 @@ class SignUpScreen extends StatelessWidget {
                   style: const TextStyle(color: Colors.black),
                   children: [
                     TextSpan(
-                        text: 'Sign In',
+                        text: 'Sign Up',
                         style: const TextStyle(
                             color: Color.fromARGB(255, 51, 17, 144),
                             fontWeight: FontWeight.bold),

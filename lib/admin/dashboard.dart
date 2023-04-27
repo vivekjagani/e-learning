@@ -3,6 +3,7 @@ import 'package:e_learning/admin/add%20video/video_list.dart';
 import 'package:e_learning/admin/faculti_list.dart';
 import 'package:e_learning/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AdminDashboard extends StatelessWidget {
   const AdminDashboard({super.key});
@@ -96,6 +97,29 @@ class AdminDashboard extends StatelessWidget {
                   child: const Center(
                       child: Text(
                     'add pdf',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            child: Container(
+              height: 60,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: const Color.fromARGB(255, 36, 111, 103)),
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: const Center(
+                      child: Text(
+                    'Log Out',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   )),
                 ),

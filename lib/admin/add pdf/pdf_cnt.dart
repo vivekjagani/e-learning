@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -24,6 +25,14 @@ class PdfCnt extends GetxController {
         title: 'title',
         url: 'https://www.clickdimensions.com/links/TestPDFfile.pdf'),
   ].obs;
+
+  openFile() async {
+    FilePickerResult? resultFile = await FilePicker.platform.pickFiles();
+
+    if (resultFile != null) {
+      debugPrint(resultFile.toString());
+    }
+  }
 }
 
 class SyllabusModel {

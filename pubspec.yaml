@@ -36,12 +36,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.3.0
   firebase_core: ^2.8.0
-  image_picker: ^0.8.7
+  image_picker: ^0.8.7+4
   get: ^4.6.5
   carousel_slider: ^4.2.1
   youtube_player_flutter: ^8.1.2
   syncfusion_flutter_pdfviewer: ^21.1.38
   flutter_cached_pdfview: ^0.4.1
+  file_picker: ^5.2.11
 
 dev_dependencies:
   flutter_test:
